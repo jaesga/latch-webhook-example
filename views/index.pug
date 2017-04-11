@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  - var status = title == 'Allowed' ? 'unlocked' : 'locked';
+  .text-center
+    img.img-latch(src='/img/icn_latch_protected.png')
+  .box  
+    p This site is an example for the Latch Webhooks implementation use, 
+      |you can check de Latch account status.
+    .alert(class=status) This site is: #[strong  #{title}]
+  
