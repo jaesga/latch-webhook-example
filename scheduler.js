@@ -11,10 +11,10 @@ scheduler.scheduleJob(rule, function(){
         console.log("Err");
     }
 
-    if (data['data']['operations']['VWfEAzQXDHjJq4ajpXtd']['status'] == "on") {
-        mg.set_on();
-    } else {
+    if (data['data']['operations'][latch.appId]['status'] == "off") {
         mg.set_off();
+    } else {
+        mg.set_on();
     }
   });
 });

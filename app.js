@@ -8,8 +8,6 @@ var bodyParser = require('body-parser');
 var mongo = require('./mongo');
 mongo.connect();
 
-var scheduler = require('./scheduler');
-
 var index = require('./routes/index');
 
 var app = express();
